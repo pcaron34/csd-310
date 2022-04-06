@@ -1,3 +1,7 @@
+# Paul Caron
+# 4-5-2022
+# Module 5.2 Assignment
+
 # import mongoclient from pymongo
 from pymongo import MongoClient
 
