@@ -18,13 +18,23 @@ db = client.pytech
 print("-- Pytech COllection List --")
 
 # print the required info from the server with an added filter
-# to get all the gobblygoock out of what was supposed to be printed
+# to get all the gobbledygook out of what was supposed to be printed
 print(db.list_collection_names(filter=None))
 
 # makes the enter key exit the program
 a = input("End of program, press Enter key to exit...")
 if a:
     exit(0) 
+
+
+
+
+
+
+
+
+
+
 
 
 
