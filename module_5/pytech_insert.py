@@ -18,22 +18,22 @@ db = cluster["pytech"]
 collection = db["students"]
 
 
-#doc = {"_id": 1007, "student_id": 1007, "first_name": "Abigail", "last_name": "Adams"}
-#doc = {"_id": 1008, "student_id": 1008, "first_name": "Patrick", "last_name": "Henry"}
-#doc = {"_id": 1009, "student_id": 1009, "first_name": "Alexander", "last_name": "Hamilton"}
+#snatch = {"_id": 1007, "student_id": 1007, "first_name": "Abigail", "last_name": "Adams"}
+#snatch = {"_id": 1008, "student_id": 1008, "first_name": "Patrick", "last_name": "Henry"}
+#snatch = {"_id": 1009, "student_id": 1009, "first_name": "Alexander", "last_name": "Hamilton"}
 
-cursor = db.collection.find({})
+snatch = db.collection.find({})
 
 #The next one isn't in the database so when "pytech_insert.py" ran it will insert George
 #Washington just so you could see it works without having to delete a person from the database
 
-doc = {"_id": 1010, "student_id": 1010, "first_name": "George", "last_name": "Washington"}
+snatch = {"_id": 1010, "student_id": 1010, "first_name": "George", "last_name": "Washington"}
 
-collection.insert_one(doc)
+collection.insert_one(snatch)
 
-#new_student_Id = students.insert_one(doc).inserted_id
+#new_student_Id = students.insert_one(snatch).inserted_id
 
 print("-- INSERTED STATEMENTS --")
-print(cursor)
-print("Inserted student record " + doc["first_name"] + " " + doc["last_name"] + " into the students collection with document_id " + str(doc["student_id"]))
+print(snatch)
+print("Inserted student record " + snatch["first_name"] + " " + snatch["last_name"] + " into the students collection with document_id " + str(snatch["student_id"]))
 print("End of program, press any key to exit...")

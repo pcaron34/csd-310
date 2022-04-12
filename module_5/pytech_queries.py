@@ -11,17 +11,17 @@ db = cluster["pytech"]
 collection = db["students"]
 
 print("-- DISPLAYING STUDENT DOCUMENTS FROM find_one() QUERY --")
-doc1 = db.students.find_one()
+snatch = db.students.find_one()
 
-print(doc1)
+print(snatch)
 print()
 print()
 
 print("-- DISPLAYING STUDENT DOCUMENT FROM find() QUERY")
-doc = db.students.find()
+snatch = db.students.find()
 
-for doc in doc:
-    print(doc)
+for snatch in snatch:
+    print(snatch)
     
 print()
 print()
