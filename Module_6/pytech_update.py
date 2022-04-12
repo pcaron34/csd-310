@@ -16,10 +16,10 @@ collection = db["students"]
 
 #print(collection)
 #db.collection.find({"first_name": "Abigail"})
+myquery = {"first_name": "Abigail"}
+student_update = {"$set": {"first_name": "Abigale"}}
 
-student_update = {"first_name": "Abigale"}
+#snatch = db.collection.find_one_and_update({"first_name": "Abigail"}, {"$set": student_update})
 
-snatch = db.collection.find_one_and_update({"first_name": "Abigail"}, {"$set": student_update})
-
-#snatch = db.collection.update_one({"first_name": "Abigail"},{set:{"age": "Deceased"}})
+snatch = db.collection.update_one(myquery, student_update)
 print(student_update)
