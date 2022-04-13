@@ -22,17 +22,22 @@ print()
 print()
 # test connection to database...uncomment to test and comment it back out when done
 # print(db)
-print("-- DISPLAYING STUDENT DOCUMENTS FROM update_one() QUERY --")
+# print("-- DISPLAYING STUDENT DOCUMENTS FROM update_one() QUERY --")
 # print(collection) # prints out all the gobblygook
 
-#>>>>>> = {"first_name": "updating this"}
-myquery = {"first_name": "Abigale"}
+# >>>>>> = {"first_name": "updating this"}
+# myquery = {"first_name": "Abigale"}
 
-snatch = collection.update_one(myquery, {"$set":{"first_name": "Abigail"}})
+# snatch = collection.update_one(myquery, {"$set":{"first_name": "Abigail"}})
 
-#snatch = collection.update_many(myquery, {"$set":{"": ""}})
+# snatch = collection.update_many(myquery, {"$set":{"": ""}})
 
-print(snatch.modified_count, "documents updated.")
+# print(snatch.modified_count, "documents updated.")
+
+snatch = db.students.delete_one()
+
+# snatch = db.students.delete_many()
+
 print()
 print()
 print("-- DISPLAYING STUDENT DOCUMENTS FROM find_one() QUERY --")
