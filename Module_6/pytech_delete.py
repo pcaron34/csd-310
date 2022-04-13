@@ -46,7 +46,6 @@ print(snatch)
 
 print()
 print()
-
 print("Delete students documents from from database with delete_one or delete")
 
 snatch = collection.delete_one({"_id": 1010})
