@@ -1,6 +1,6 @@
 # Paul Caron
-# 4/12/2022
-# Module 6.2 Assignment
+# 4/13/2022
+# Module 6.3 Assignment
 
 #import pymongo and friends
 import pymongo
@@ -22,6 +22,11 @@ print()
 print()
 # test connection to database...uncomment to test and comment it back out when done
 # print(db)
+print("Insert_one document")
+snatch = {"_id": 1010, "student_id": 1010, "first_name": "George", "last_name": "Washington"}
+
+collection.insert_one(snatch)
+
 # print("-- DISPLAYING STUDENT DOCUMENTS FROM update_one() QUERY --")
 # print(collection) # prints out all the gobblygook
 
@@ -34,17 +39,29 @@ print()
 
 # print(snatch.modified_count, "documents updated.")
 
-snatch = db.students.delete_one()
-
-# snatch = db.students.delete_many()
-
-print()
-print()
 print("-- DISPLAYING STUDENT DOCUMENTS FROM find_one() QUERY --")
 snatch = db.students.find_one()
 
 print(snatch)
 
+print()
+print()
+
+print("Delete students documents from from database with delete_one or delete")
+
+snatch = collection.delete_one({"_id": 1010})
+
+# snatch = collection.delete()
+
+print()
+print()
+print("-- DISPLAYING STUDENT DOCUMENT FROM find() QUERY")
+snatch = db.students.find()
+
+for snatch in snatch:
+    print(snatch)
+    
+print()
 print()
 print()
 
