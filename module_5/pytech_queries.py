@@ -26,6 +26,10 @@ for snatch in snatch:
 print()
 print()
 
+print("-- DISPLAYING STUDENT DOCUMENTS FROM find_one() QUERY --")
+snatch = db.students.find_one()
+
+
 print("End of program, press any key to continue...")
 
 
