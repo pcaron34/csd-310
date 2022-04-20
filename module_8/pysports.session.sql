@@ -1,5 +1,5 @@
 -- create pysports_user and grant them all privileges to the pysports database
-CREATE USER 'paul'@'localhost' IDENTIFIED WITH mysql_native_password BY 'BigBadWolfEater9/er';
+CREATE USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'BigBadWolfEater9/er';
 
 -- grant all priveleges to the pysports database to user pysports_user on localhost
 GRANT ALL PRIVILEGES ON pysports.* TO'root'@'localhost';
@@ -32,7 +32,27 @@ CREATE TABLE player (
 INSERT INTO team(team_name, mascot)
     VALUES('Team Nebraska', 'Huskers');
 
+INSERT INTO team(team_name, mascot)
+    VALUES('Team Florida', 'Hurricanes');
+
+
+-- insert player records 
+INSERT INTO player(first_name, last_name, team_id) 
+    VALUES('Scott', 'Frost', (SELECT team_id FROM team WHERE team_name = 'Team Nebraska'));
+INSERT INTO player(first_name, last_name, team_id)
+    VALUES('Jeff', 'Makovicka', (SELECT team_id FROM team WHERE team_name = 'Team Nebraska'));
+INSERT INTO player(first_name, last_name, team_id)
+    VALUES('Tommie', 'Frazier', (SELECT team_id FROM team WHERE team_name = 'Team Nebraska'));
+INSERT INTO player(first_name, last_name, team_id) 
+    VALUES('Dane', 'Prewitt', (SELECT team_id FROM team WHERE team_name = 'Team Hurricanes'));
+INSERT INTO player(first_name, last_name, team_id)
+    VALUES('Trent', 'Jones', (SELECT team_id FROM team WHERE team_name = 'Team Hurricanes'));
+INSERT INTO player(first_name, last_name, team_id)
+    VALUES('Jonathan', 'Harris', (SELECT team_id FROM team WHERE team_name = 'Team Hurricanes'));
+
+
+
 -- drop tables if they are present
-DROP TABLE IF EXISTS player;
+-- DROP TABLE IF EXISTS player;
 
 
