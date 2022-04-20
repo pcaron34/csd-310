@@ -1,3 +1,8 @@
+# Paul Caron
+# 4/9/2022
+# Module 5.3 Assignment
+
+import os
 import pymongo
 from pymongo import MongoClient
 
@@ -5,7 +10,23 @@ cluster = MongoClient("mongodb+srv://admin:admin@cluster0.lk4hy.mongodb.net/stud
 db = cluster["pytech"]
 collection = db["students"]
 
-docs = db.students.find({})
+print("-- DISPLAYING STUDENT DOCUMENTS FROM find_one() QUERY --")
+snatch = db.students.find_one()
 
-for doc in docs:
-    print(docs)
+print(snatch)
+print()
+print()
+
+print("-- DISPLAYING STUDENT DOCUMENT FROM find() QUERY")
+snatch = db.students.find()
+
+for snatch in snatch:
+    print(snatch)
+    
+print()
+print()
+
+print("End of program, press any key to continue...")
+
+
+
