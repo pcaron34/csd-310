@@ -1,6 +1,8 @@
 #Paul Caron
-#4/23/2022
+#4/25/2022
 #Module 9.2 Assignment
+#This assignment was to learn how 
+#to construct and execute aggregate queries in a MySQL database
 
 import mysql.connector
 from mysql.connector import errorcode
