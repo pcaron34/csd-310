@@ -1,3 +1,7 @@
+#Paul Caron
+#4/23/2022
+#Module 9.2 Assignment
+
 import mysql.connector
 from mysql.connector import errorcode
 
