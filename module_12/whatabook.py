@@ -1,3 +1,8 @@
+######################################################################################
+#                                                                                    #
+#THIS IS NOT COMPLETE BUT I HAD TO SUBMIT SOMETHING BEFORE IT GOT TO LATE IN THE WEEK#
+#                                                                                    # 
+######################################################################################
 # does what it says
 import os
 import sys
@@ -94,44 +99,20 @@ while option != 4:
                 # gets the book id for the database
                 book_id = input("Enter the book id: ")
                 # insert statement for the database
-                insertStatement = ("INSERT INTO wishlist (user_id, book_id) VALUES (%s, %s)")
+                insertIntoWishlist = ("INSERT INTO wishlist (user_id, book_id) VALUES (%s, %s)")
                 # variables holding user id(which was gotten earlier) and book id
                 data = (access, book_id)
                 # database execute command
-                cursor.execute(insertStatement, data)
+                cursor.execute(insertIntoWishlist, data)
                 # commit to the database
                 db.commit()
                 # mama always said to be polite (read this in Forrest Gump's voice...lol)
                 print("Thank you, enjoy your book")
-                #time.sleep(2)
+                #pauses until user hits enter
                 os.system('pause')
                 acct_option = 3
 
-                # this was a failed attempt
-                #if wantedBooks == True:
-                #    sql = "INSERT wishlist (book_id, user_id) VALUES (%s, %s)"
-                #    val = [
-                #        ("101", "11"),
-                #        ("104", "13"),
-                #        ("108", "12"),
-                #    ]
-                #    cursor.executemany(sql, val)
-                #    db.commit()
-                #    print(cursor.rowcount, "were or was inserted.")
-                #else:
-                #    print("There was an issue")
-                
-
-                #print out list of books
-                #print("The books we have are: ")
-                #cursor.execute("SELECT book_id, book_name, author, details FROM books")
-                #result2 = cursor.fetchall()
-                #if result2:
-                #    for x in result2:
-                #        print(x)
-                #    acct_option = 3
                                 
-            # returns
             elif acct_option == 3:
                 acct_option()
             # prints out when user doesn't do something right
