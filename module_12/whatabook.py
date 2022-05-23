@@ -1,8 +1,4 @@
-######################################################################################
-#                                                                                    #
-#THIS IS NOT COMPLETE BUT I HAD TO SUBMIT SOMETHING BEFORE IT GOT TO LATE IN THE WEEK#
-#                                                                                    # 
-######################################################################################
+
 # does what it says
 import os
 import sys
